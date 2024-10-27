@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{% block title %}Ajout d'une Personne
+{% endblock %}
+{% block body %}
+    <h1>
+        La liste des personnes</h1>
+    <table class="table table-striped" >
+        <tr>
+            <td>id</td>
+            <td>firstname</td>
+            <td>name</td>
+            <td>age</td>
+            <td>job</td>
+        </tr>
+        {% for personne in personnes %}
+        <tr>
+            <td>{{personne.id}}</td>
+            <td>{{personne.firstName}}</td>
+            <td>{{personne.name}}</td>
+            <td>{{personne.age}}</td>
+            <td>{{personne.job}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+

@@ -1,0 +1,42 @@
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Formulaire de l'Article</h2>
+    {{ form_start(form) }}
+        <div class="row mb-3">
+            <div class="col-md-3 text-md-end">
+                {{ form_label(form.Titre,null, {'label_attr': {'class': 'fw-bold'}}) }}
+            </div>
+            <div class="col-md-9">
+                {{ form_widget(form.Titre, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-3 text-md-end">
+                {{ form_label(form.contenu, null, {'label_attr': {'class': 'fw-bold'}}) }}
+            </div>
+            <div class="col-md-9">
+                {{ form_widget(form.contenu, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-3 text-md-end">
+                {{ form_label(form.dateCreation, 'Date de création', {'label_attr': {'class': 'fw-bold'}}) }}
+            </div>
+            <div class="col-md-9">
+                {{ form_widget(form.dateCreation, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-3 text-md-end">
+                {{ form_label(form.user, 'Créateur', {'label_attr': {'class': 'fw-bold'}}) }}
+            </div>
+            <div class="col-md-9">
+                {{ form_widget(form.user, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col text-center">
+                <button class="btn btn-primary">{{ button_label|default('Enregistrer') }}</button>
+            </div>
+        </div>
+    {{ form_end(form) }}
+</div>

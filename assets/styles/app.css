@@ -1,0 +1,10 @@
+body {
+    background-color:blueviolet;
+}
+H1{
+text-align: center;
+background-color: darkblue;
+color: cadetblue;
+
+}
+@import "~bootstrap/dist/css/bootstrap.min.css";
